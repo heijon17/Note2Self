@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:card_view="http://schemas.android.com/tools"
+              android:id="@+id/card_layout"
+>
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_margin"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="@dimen/card_album_radius"
+            android:id="@+id/card_view"
+    >
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/card_image_height"
+                    android:scaleType="fitCenter"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:id="@+id/card_image"
+            />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_card_title"
+                    android:layout_below="@+id/card_image"
+                    android:paddingLeft="@dimen/title_padding"
+                    android:paddingRight="@dimen/title_padding"
+                    android:paddingTop="@dimen/title_padding"
+                    android:textSize="@dimen/card_title"
+            />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_card_description"
+                    android:layout_below="@+id/txt_card_title"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:paddingLeft="@dimen/title_padding"
+                    android:paddingRight="@dimen/title_padding"
+                    android:textSize="@dimen/songs_count"
+            />
+
+            <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/card_image"
+                    android:id="@+id/img_card_menu"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/vertical_dots"
+                    android:textSize="24sp"
+                    android:gravity="center"
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_timedate"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/app_name"
+            />
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+
+                >
+                    <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/map_icon"
+                            android:id="@+id/img_location"
+                            android:layout_centerHorizontal="true"
+                    />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_location"
+                            android:layout_below="@+id/img_location"
+                            android:layout_centerInParent="true"
+                    />
+                </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
